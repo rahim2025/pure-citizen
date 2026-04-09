@@ -1,0 +1,10 @@
+[
+  { "id": "1", "name": "Chattagram", "lat": 22.84, "lng": 91.00 },
+  { "id": "2", "name": "Rajshahi",   "lat": 24.37, "lng": 88.56 },
+  { "id": "3", "name": "Khulna",     "lat": 22.80, "lng": 89.55 },
+  { "id": "4", "name": "Barisal",    "lat": 22.70, "lng": 90.35 },
+  { "id": "5", "name": "Sylhet",     "lat": 24.89, "lng": 91.87 },
+  { "id": "6", "name": "Dhaka",      "lat": 23.81, "lng": 90.41 },
+  { "id": "7", "name": "Rangpur",    "lat": 25.74, "lng": 89.25 },
+  { "id": "8", "name": "Mymensingh", "lat": 24.75, "lng": 90.40 }
+]
