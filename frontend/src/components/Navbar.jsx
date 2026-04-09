@@ -12,10 +12,15 @@ export default function Navbar() {
     navigate('/');
   };
 
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    navigate('/');
+  };
+
   return (
     <nav className="navbar">
       {/* Logo */}
-      <Link to="/" className="navbar-logo">
+      <Link to="/" className="navbar-logo" onClick={handleLogoClick}>
         LocalPulse
       </Link>
 

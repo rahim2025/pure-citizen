@@ -177,13 +177,11 @@ export const getNearbyPosts = async (req, res) => {
 
     // ── Geospatial filter (only if no admin filter and lat/lng provided) ───
     if (!division_id && !district_id && !upazila_id && !union_id && lat && lng) {
+      const EARTH_RADIUS_METERS = 6378137;
+      const radiusInRadians = parseInt(radius, 10) / EARTH_RADIUS_METERS;
       filter.location = {
-        $nearSphere: {
-          $geometry: {
-            type: 'Point',
-            coordinates: [parseFloat(lng), parseFloat(lat)],
-          },
-          $maxDistance: parseInt(radius, 10),
+        $geoWithin: {
+          $centerSphere: [[parseFloat(lng), parseFloat(lat)], radiusInRadians],
         },
       };
     }
